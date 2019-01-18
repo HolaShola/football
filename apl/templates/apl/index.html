@@ -1,0 +1,9 @@
+{% if all_comands %}
+    <ul>
+        {% for comand in all_comands %}
+            <li><a href="/apl/{{ comand.id }}/">{{ comand.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h3>You don't have any albums</h3>
+{% endif %}
