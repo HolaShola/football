@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from apl import views
+from rest_framework.urlpatterns import format_suffix_patterns
+from companies.views import StockList
 
 urlpatterns = [
     path('', views.sayHello),
@@ -23,4 +25,7 @@ urlpatterns = [
     path('apl/', include('apl.urls')),
     path('italy/', include('italy.urls')),
     path('spain/', include('spain.urls')),
+    path('stocks/', StockList.as_view())
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)

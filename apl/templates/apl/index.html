@@ -1,3 +1,8 @@
+<!-- loads the path to your static files -->
+{% load staticfiles %}
+<!-- <link rel="stylesheet" type="text/css" href="../../static/apl/style.css">-->
+<link rel="stylesheet" type="text/css" href="{% static 'apl/style.css' %}">
+
 {% if all_comands %}
     <ul>
         {% for comand in all_comands %}
@@ -5,5 +10,5 @@
         {% endfor %}
     </ul>
 {% else %}
-    <h3>You don't have any albums</h3>
+    <h3>You don't have any comand</h3>
 {% endif %}
