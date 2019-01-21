@@ -1,0 +1,15 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  </head>
+  <body>
+    {% load render_bundle from webpack_loader %}
+
+    {% block main %}
+    <div id="root"></div>
+    {% render_bundle 'main' %}
+    {% endblock %}    
+  </body>
+</html>

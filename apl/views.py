@@ -19,3 +19,6 @@ def detail(request, comand_id):
     # return render(request, 'apl/detail.html', {'comand': comand})
     comand = get_object_or_404(Comand, id = comand_id)
     return render(request, 'apl/detail.html', {'comand': comand})
+
+def react(request):
+    return render(request, 'apl/view1.html')

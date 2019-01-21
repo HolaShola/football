@@ -7,4 +7,6 @@ urlpatterns = [
 
     # /apl/id
     path('<int:comand_id>/', views.detail, name='detail'),
+
+    path('react/', views.react, name='react')
 ]
