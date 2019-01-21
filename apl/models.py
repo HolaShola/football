@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Comand(models.Model):
     name = models.CharField(max_length=30)
     city = models.CharField(max_length=20)
@@ -8,6 +9,7 @@ class Comand(models.Model):
 
     def __str__(self):
         return self.name + ' - ' + self.city
+
 
 class Player(models.Model):
     name = models.CharField(max_length=30)
