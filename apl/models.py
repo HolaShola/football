@@ -1,7 +1,9 @@
+"""pass"""
 from django.db import models
 
 
 class Comand(models.Model):
+    """pass"""
     name = models.CharField(max_length=30)
     city = models.CharField(max_length=20)
     founding_date = models.IntegerField()
@@ -12,6 +14,7 @@ class Comand(models.Model):
 
 
 class Player(models.Model):
+    """pass"""
     name = models.CharField(max_length=30)
     comand = models.ForeignKey(Comand, on_delete=models.CASCADE)
     goals = models.IntegerField()

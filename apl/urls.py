@@ -1,3 +1,4 @@
+"""module docstring"""
 from django.urls import path
 from . import views
 
@@ -8,5 +9,9 @@ urlpatterns = [
     # /apl/id
     path('<int:comand_id>/', views.detail, name='detail'),
 
-    path('react/', views.react, name='react')
+    # /apl/react/
+    path('react/', views.react, name='react'),
+
+    # /apl/all/
+    path('all/', views.ComandList.as_view())
 ]

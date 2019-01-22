@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'spain',
     'rest_framework',
     'companies',
+    'API',
     'webpack_loader'
 ]
 

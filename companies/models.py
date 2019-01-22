@@ -1,7 +1,9 @@
+"""module docstring"""
 from django.db import models
 
 
 class Stock(models.Model):
+    """class Stock docstring"""
     ticker = models.CharField(max_length=10)
     open = models.FloatField()
     close = models.FloatField()

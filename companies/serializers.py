@@ -1,9 +1,10 @@
+"""module docstring"""
 from rest_framework import serializers
 from .models import Stock
 
 
 class StockSerializer(serializers.ModelSerializer):
-
+    """pass"""
     class Meta:
         model = Stock
         # define which properties we want to receive

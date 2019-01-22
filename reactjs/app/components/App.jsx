@@ -19,6 +19,10 @@ class App extends Component {
             })
     }
 
+    getDataMethod() {
+        this.props.getDataAction();
+    }
+
     render() {
         return (
             <ul>
