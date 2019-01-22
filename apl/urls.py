@@ -10,8 +10,5 @@ urlpatterns = [
     path('<int:comand_id>/', views.detail, name='detail'),
 
     # /apl/react/
-    path('react/', views.react, name='react'),
-
-    # /apl/all/
-    path('all/', views.ComandList.as_view())
+    path('react/', views.react, name='react')
 ]

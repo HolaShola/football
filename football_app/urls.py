@@ -18,7 +18,6 @@ from django.urls import path, include
 from rest_framework.urlpatterns import format_suffix_patterns
 
 from apl import views
-from companies.views import StockList
 
 urlpatterns = [
     path('', views.say_hello),
@@ -26,8 +25,7 @@ urlpatterns = [
     path('apl/', include('apl.urls')),
     path('italy/', include('italy.urls')),
     path('spain/', include('spain.urls')),
-    path('stocks/', StockList.as_view()),
-    path('api/', include('API.urls'))
+    path('api/', include('api.urls'))
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

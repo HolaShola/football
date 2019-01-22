@@ -1,11 +1,7 @@
 """views module docstring"""
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-# from django.http import Http404
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from .models import Comand, Player
-from .serializers import ComandSerializer
+from .models import Comand
 
 
 def say_hello(request):
@@ -34,13 +30,3 @@ def detail(request, comand_id):
 def react(request):
     """react function docstring"""
     return render(request, 'apl/view1.html')
-
-
-class ComandList(APIView):
-    """pass"""
-
-    def get(self, request):
-        """pass"""
-        comands = Comand.objects.all()
-        serializer = ComandSerializer(comands, many=True)
-        return Response(serializer.data)

@@ -16,4 +16,8 @@ class PlayerSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Player
+        # define which properties we want to receive
+        # fields = ('ticker', 'volume')
+        # if we want receive all properties:
+        # fields = '__all__'
         fields = '__all__'
