@@ -28,4 +28,4 @@ urlpatterns = [
     path('api/', include('api.urls'))
 ]
 
-urlpatterns = format_suffix_patterns(urlpatterns)
+# urlpatterns = format_suffix_patterns(urlpatterns)

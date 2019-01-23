@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CustomForm from './Form.jsx';
 
 class App extends Component {
     constructor(props) {
@@ -25,9 +26,12 @@ class App extends Component {
 
     render() {
         return (
-            <ul>
-                {this.state.articles.map(article => <li>{article.ticker} - {article.volume}</li>)}
-            </ul>
+            <div>
+                <ul>
+                    {this.state.articles.map(article => <li>{article.ticker} - {article.volume}</li>)}
+                </ul>
+                <CustomForm />
+            </div>
         )
     }
 }
