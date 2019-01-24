@@ -13,7 +13,7 @@ module.exports = {
         filename: "[name]-[hash].js",
         path: path.resolve('../apl/static/apl/bundles/local')
     },
-
+    devtool: 'source-map',
     resolve: {
     },
 

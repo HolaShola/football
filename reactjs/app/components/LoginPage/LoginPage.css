@@ -1,0 +1,33 @@
+.auth {
+    margin: 100px auto;
+    width: 250px;
+    padding: 35px;
+    background: #3b7cdf36;
+}
+
+.auth_password input {
+    padding: 0;
+    width: 250px;
+    height: 25px;
+    margin-bottom: 10px; 
+}
+
+.auth_pass input {
+    width: 250px;
+    height: 25px;
+}
+
+.auth_in input {
+    width: 254px;
+    height: 25px;
+    background: #3b7cdf;
+    border: 0px solid #000000;
+    margin-top: 10px;
+}
+
+.create_account p {
+    margin-top: 20px;
+    text-align: center;
+    font-style: unset;
+    color: #3b7cdf;
+}

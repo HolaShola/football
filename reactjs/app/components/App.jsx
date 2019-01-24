@@ -1,54 +1,61 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import CustomForm from './Form.jsx';
-import * as actions from '../actions/auth';
+// import React, { Component } from 'react';
+// import { connect } from 'react-redux';
+// import { BrowserRouter } from 'react-router-dom';
+// import CustomForm from './Form.jsx';
+// import * as actions from '../actions/auth';
+// import BaseRouter from './routes';
 
-class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            articles: []
-        };
-    }
+// class App extends Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             articles: []
+//         };
+//     }
     
-    componentDidMount() {
-        // fetch("http://localhost:8000/stocks/")
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         console.log(data)
-        //         this.setState({
-        //             articles: data
-        //         })
-        //     })
-        this.props.onTryAutoSignup();
-    }
+//     componentDidMount() {
+//         this.props.onTryAutoSignup();
+//     }
 
-    getDataMethod() {
-        this.props.getDataAction();
-    }
+//     render() {
+//         return (
+//             <div>
+//                 <BrowserRouter>
+//                     <CustomForm {...this.props} >
+//                         <BaseRouter />
+//                     </CustomForm>
+//                 </BrowserRouter>
+//             </div>
+//         )
+//     }
+// }
 
-    render() {
-        return (
-            <div>
-                <ul>
-                    {this.state.articles.map(article => <li>{article.ticker} - {article.volume}</li>)}
-                </ul>
-                <CustomForm {...this.props} />
-            </div>
-        )
-    }
-}
+// const mapStateToProps = state => {
+//     return {
+//         isAuth: state.token != null
+//     }
+// };
 
-const mapStateToProps = state => {
-    return {
-        isAuth: state.token != null
-    }
-};
+// const mapDispatchToProps = dispatch => {
+//     return {
+//         onTryAutoSignup: () => dispatch(actions.authCheckState())
+//     }
+// }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        onTryAutoSignup: () => dispatch(actions.authCheckState())
-    }
-}
+// export default connect(mapStateToProps, mapDispatchToProps)(App);
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+import React from 'react';
+import { Route } from 'react-router-dom';
+import HomePage from './HomePage';
+import LoginPage from './LoginPage';
+import CreateAccountPage from './CreateAccountPage';
+
+const App = () => (
+  <div>
+    <Route exact path="/" component={HomePage} />
+    <Route path="/login" component={LoginPage} />
+    <Route path="/account" component={CreateAccountPage} />
+  </div>
+);
+
+export default App;

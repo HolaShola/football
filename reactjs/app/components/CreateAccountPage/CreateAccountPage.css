@@ -1,0 +1,17 @@
+.account {
+    width: 250px;
+    margin: 100px auto;
+    padding: 35px;
+    background: #3b7cdf36;
+}
+
+.account input {
+    width: 250px;
+    height: 25px;
+    margin-bottom: 10px; 
+}
+
+.account_in input {
+    width: 254px;
+    background: #3b7cdf;
+}

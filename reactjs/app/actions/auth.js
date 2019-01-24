@@ -41,13 +41,18 @@ export const authLogin = (username, password) => {
         dispatch(authStart());
         fetch('http://localhost:8000/rest-auth/login/', {
             method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify({
                 username: username,
                 password: password    
             })
         })
+        .then(response => response.json())
         .then(res => {
-            const token = res.data.key;
+            console.log(res);
+            const token = res.key;
             const expirationDate = new Date(new Date().getTime() + 3600 * 1000);
             localStorage.setItem('token', token);
             localStorage.setItem('expirationDate', expirationDate);
