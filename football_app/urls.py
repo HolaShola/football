@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework.urlpatterns import format_suffix_patterns
+# from rest_framework.urlpatterns import format_suffix_patterns
 
 from apl import views
 
@@ -25,7 +25,9 @@ urlpatterns = [
     path('apl/', include('apl.urls')),
     path('italy/', include('italy.urls')),
     path('spain/', include('spain.urls')),
-    path('api/', include('api.urls'))
+    path('api/', include('api.urls')),
+    path('rest-auth/', include('rest_auth.urls')),
+    path('rest-auth/registration/', include('rest_auth.registration.urls'))
 ]
 
 # urlpatterns = format_suffix_patterns(urlpatterns)

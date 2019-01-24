@@ -50,6 +50,11 @@ class CustomForm extends React.Component {
     render() {
         return (
             <form action="">
+                {
+                    this.props.isAuth ? 
+                        <button>Logout</button>
+                    : null
+                }
                 <div>
                     <input onChange={this.handleChangeComandName} />
                 </div>
