@@ -6,3 +6,5 @@ bundles/
 webpack-stats.json
 db.sqlite3
 package-lock.json
+my_env/
+*.pyc
