@@ -8,6 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^11.2.0",
+    "@ckeditor/ckeditor5-react": "^1.1.0",
     "antd": "^3.12.4",
     "babel-polyfill": "^6.23.0",
     "es6-promise": "^3.1.2",
@@ -19,12 +21,12 @@
     "react-dom": "16.7.0",
     "react-redux": "6.0.0",
     "react-router": "4.3.1",
+    "react-router-dom": "4.3.1",
     "redux": "4.0.1",
     "redux-form": "^7.0.3",
     "redux-thunk": "^2.3.0",
     "webpack-bundle-tracker": "^0.4.2-beta",
-    "webpack-dev-server": "^2.7.1",
-    "react-router-dom": "4.3.1"
+    "webpack-dev-server": "^2.7.1"
   },
   "devDependencies": {
     "babel-cli": "^6.5.2",
